@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USAM Cloud Requirement Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">USAM Technology Solutions </p>
+      <h1>Cloud Solution Requirement Portal</h1>
+      <p>IaaS(Infrastructure as a Service)</p>
+      <p>Capture customer infrastructure requirements for cloud solution discovery.</p>
+    </div>
+    <div class="badge">Catalyst Portfolio</div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="section-title">
+        <div>
+          <h2>Customer Requirement</h2>
+          <p>Fill in the infrastructure details below.</p>
+        </div>
+        <span id="status" class="status">Ready</span>
+      </div>
+
+      <form id="requirementForm">
+        <div class="grid">
+          <label>Company Name *
+            <input name="companyName" required placeholder="Example Technologies Pvt Ltd">
+          </label>
+          <label>Contact Name *
+            <input name="contactName" required placeholder="Customer contact">
+          </label>
+          <label>Email *
+            <input type="email" name="email" required placeholder="name@company.com">
+          </label>
+          <label>Phone
+            <input name="phone" placeholder="+91 XXXXX XXXXX">
+          </label>
+          <label>Location *
+            <input name="location" required placeholder="Chennai">
+          </label>
+          <label>Industry
+            <input name="industry" placeholder="Manufacturing / IT / Healthcare">
+          </label>
+          <label>Current Environment *
+            <select name="currentEnvironment" required>
+              <option value="">Select</option>
+              <option>On-Prem</option>
+              <option>AWS</option>
+              <option>Azure</option>
+              <option>GCP</option>
+              <option>Hybrid</option>
+            </select>
+          </label>
+          <label>Virtualization Platform
+            <select name="virtualizationPlatform">
+              <option value="">Select an option</option>
+              <option value="VMware">VMware</option>
+              <option value="HPE VM Essentials">HPE VM Essentials</option>
+              <option value="Citrix Hypervisor">Citrix Hypervisor</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+          </label>
+          <label>Workload
+            <input name="workload" placeholder="ERP / Database / Application / File Server">
+          </label>
+          <label>CPU
+            <input name="cpu" placeholder="8 vCPU">
+          </label>
+          <label>RAM
+            <input name="ram" placeholder="32 GB">
+          </label>
+          <label>Storage
+            <input name="storage" placeholder="2 TB">
+          </label>
+          <label>Backup Required?
+            <select name="backupRequired">
+              <option>Yes</option>
+              <option>No</option>
+              <option>To be discussed</option>
+            </select>
+          </label>
+          <label>DR Required?
+            <select name="drRequired">
+              <option>Yes</option>
+              <option>No</option>
+              <option>To be discussed</option>
+            </select>
+          </label>
+          <label>Managed Services?
+            <select name="managedServices">
+              <option>Yes</option>
+              <option>No</option>
+              <option>To be discussed</option>
+            </select>
+          </label>
+          <label>Infrastructure as a Service (IaaS) Requirement
+            <select name="iaasRequirement">
+              <option value="">Select an option</option>
+              <option value="New Cloud Infrastructure">New Cloud Infrastructure</option>
+              <option value="Migration">Migration</option>
+              <option value="Scalability">Scalability</option>
+              <option value="Backup">Backup</option>
+              <option value="Disaster Recovery">Disaster Recovery</option>
+            </select>
+          </label> 
+          <label>Preferred Cloud Provider
+            <select name="preferredCloudProvider">
+              <option value="">Select an option</option>
+              <option value="AWS">Amazon Web Services (AWS)</option>
+              <option value="Microsoft Azure">Microsoft Azure</option>
+              <option value="Google Cloud Platform">Google Cloud Platform (GCP)</option>
+              <option value="Yotta">Yotta</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+          </label>
+          <label>Cloud Access Type
+            <select name="cloudAccessType">
+               <option value="">Select an option</option>
+               <option value="Business Hours">Business Hours</option>
+               <option value="24x7">24x7</option>
+               <option value="Flexible">Flexible</option>
+               <option value="To be discussed">To be discussed</option>
+            </select>
+          </label>
+          <label>Application Access Requirements
+            <select name="Application Access Requirements">
+               <option value="">Select an option</option>
+               <option value="Public">Public</option>
+               <option value="Private">Private</option>
+               <option value="Both">Both</option>
+            </select>
+          </label>
+          <label>Migration Type
+            <select name="migrationType">
+              <option value="">Select an option</option>
+              <option value="On-Premises to Cloud">On-Premises to Cloud</option>
+              <option value="Cloud to On-Premises">Cloud to On-Premises</option>
+              <option value="Cloud to Cloud">Cloud to Cloud</option>
+            </select>
+          </label> 
+          <label>Scalability Requirement
+            <select name="scalabilityRequirement">
+              <option value="">Select an option</option>
+              <option value="Server">Server</option>
+              <option value="Storage">Storage</option>
+              <option value="Server and Storage">Server and Storage</option>
+            </select>
+          </label>
+          <label>Backup Requirement
+            <select name="backupRequirement">
+              <option value="">Select an option</option>
+              <option value="New Backup Setup">New Backup Setup</option>
+              <option value="Existing Backup Migration">Existing Backup Migration</option>
+              <option value="Backup Tool Required">Backup Tool Required</option>
+            </select>
+          </label>
+          <label>Disaster Recovery Requirement
+            <select name="drRequirement">
+              <option value="">Select an option</option>
+              <option value="VM Categorization">Categorizing Virtual Machines (VMs)</option>
+              <option value="Site Recovery Manager (SRM)">Site Recovery Manager (SRM)</option>
+              <option value="DR Site Setup">DR Site Setup</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+          </label>
+
+        </div>
+
+        <button id="submitBtn" type="submit">Submit Requirement</button>
+      </form>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="card">
+      <h2>What this project demonstrates</h2>
+      <div class="features">
+        <div><strong>Frontend</strong><span>HTML, CSS and JavaScript</span></div>
+        <div><strong>Serverless</strong><span>Catalyst Advanced I/O Function</span></div>
+        <div><strong>Database</strong><span>Catalyst Data Store</span></div>
+        <div><strong>Testing</strong><span>Validation, API response and logs</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>USAM Cloud Solutions • Catalyst Learning Portfolio</footer>
+  <script src="app.js"></script>
+</body>
+</html>

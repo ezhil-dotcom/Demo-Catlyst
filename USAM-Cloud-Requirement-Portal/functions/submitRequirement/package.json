@@ -1,0 +1,12 @@
+{
+  "name": "usam-cloud-requirement-api",
+  "version": "1.0.0",
+  "description": "Catalyst API for the USAM Cloud Requirement Portal",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "zcatalyst-sdk-node": "2.5.0"
+  }
+}
